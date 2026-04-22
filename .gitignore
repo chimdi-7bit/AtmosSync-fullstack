@@ -1,0 +1,39 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+api/atmosync.db
+api/server.log
+
+# Node.js
+node_modules/
+dist/
+.npm/
+.cache/
+.vite/
+.env.local
+.env.*.local
+
+# Gemini & Cursor (CLI Specific)
+.gemini/
+.cursor/
+.antigravity/
+
+# System & OS
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.sommelierrc
+.sudo_as_admin_successful
+.viminfo
+.Xauthority
+.config/
+.local/
+.pki/
+.ssh/
+.vscode/
+
+# Logs
+*.log

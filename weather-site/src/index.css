@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  /* Light Mode Defaults */
+  --color-primary: #0096b4;
+  --color-secondary: #5a61a6;
+  --color-tertiary: #8c6300;
+  --color-error: #ba1a1a;
+  --color-surface: #f8f9ff;
+  --color-on-surface: #111b2e;
+  --color-on-surface-variant: #40484c;
+  --color-outline: #70787d;
+  --color-background: #f0f4f9;
+
+  /* Dark Mode specific values */
+  --color-dark-primary: #00d2ff;
+  --color-dark-secondary: #bdc2ff;
+  --color-dark-tertiary: #ffd79f;
+  --color-dark-tertiary-fixed-dim: #ffba4a;
+  --color-dark-error: #ffb4ab;
+  --color-dark-surface: #041329;
+  --color-dark-background: #041329;
+  --color-dark-on-surface: #d6e3ff;
+  --color-dark-on-surface-variant: #bbc9cf;
+  --color-dark-on-primary: #003543;
+  --color-dark-surface-container-lowest: #010e24;
+  --color-dark-surface-container: #112036;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Space Grotesk', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glass Panels - Light Mode (Default) */
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.light .glass-weather {
+  border-top: 4px solid #00d2ff;
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.light .glass-forecast {
+  border-top: 4px solid #7c83fd;
+  background: linear-gradient(135deg, rgba(189, 194, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.light .glass-celestial {
+  border-top: 4px solid #ffba4a;
+  background: linear-gradient(135deg, rgba(255, 186, 74, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.light .glass-currency {
+  border-top: 4px solid #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.light .glass-intel {
+  border-top: 4px solid #ef4444;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+/* Liquid Glass - Dark Mode */
+.dark .liquid-glass {
+  background: rgba(28, 42, 65, 0.25);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark .liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.4), rgba(189, 194, 255, 0.1) 50%, rgba(168, 85, 247, 0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.dark .glass-weather { border-left: 4px solid #00d2ff; background: linear-gradient(135deg, rgba(0, 210, 255, 0.1) 0%, rgba(28, 42, 65, 0.25) 100%); }
+.dark .glass-forecast { border-left: 4px solid #bdc2ff; background: linear-gradient(135deg, rgba(189, 194, 255, 0.1) 0%, rgba(28, 42, 65, 0.25) 100%); }
+.dark .glass-celestial { border-left: 4px solid #ffba4a; background: linear-gradient(135deg, rgba(255, 186, 74, 0.1) 0%, rgba(28, 42, 65, 0.25) 100%); }
+.dark .glass-currency { border-left: 4px solid #4ade80; background: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(28, 42, 65, 0.25) 100%); }
+.dark .glass-intel { border-left: 4px solid #ffb4ab; background: linear-gradient(135deg, rgba(255, 180, 171, 0.1) 0%, rgba(28, 42, 65, 0.25) 100%); }
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(0, 150, 180, 0.15);
+}
+
+.dark .text-glow {
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.light body {
+  background-color: #e2e8f0;
+  background-image: radial-gradient(at 0% 0%, hsla(199, 100%, 93%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225, 100%, 95%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(202, 100%, 94%, 1) 0, transparent 50%), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBRKa1HDGtjEGIDvsQLdwM8Zg1nqfTzI03jLxuNZooSunhJ0mULLP-J1uD0mgOJ2RKNBYOs-zHiyRJxHxoZCgZiK-ZvxNJ40wG-wY49s0qkPv6YtBXkTZ9sIxvzGCOGLv0YouydXDX35UQcHdISuVEk9u35e7EQ4E2QIxBPATw9wwXNV-MR0NnZaQZsMHAibPhOtXb0wBHjPNuXnWDjhP9AMo-E-qtBGWRUgaKz1cDzPPh-EC-EHQ2ICRihZ27E50ZY1TwDVIQWjKSm);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.dark body {
+  background-image: radial-gradient(circle at 50% -20%, #1a2c4d 0%, #041329 100%);
+  background-color: #041329;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}

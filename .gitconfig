@@ -1,0 +1,9 @@
+[user]
+	email = chimdex.0413@gmail.com
+	name = chimdi-7bit
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

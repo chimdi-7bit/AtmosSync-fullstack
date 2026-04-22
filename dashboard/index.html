@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BridgeBeat - Music Transfer Dashboard</title>
+    <!-- Load Tailwind CSS via CDN with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Import Manrope and Inter fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@500;600&display=swap" rel="stylesheet"/>
+    <!-- Import Material Symbols Outlined icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      // Configure Tailwind with the BridgeBeat color palette and theme extensions
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "secondary-container": "#c00100",
+              "on-tertiary-fixed-variant": "#6e6d6d",
+              "surface": "#0e0e0e",
+              "on-secondary-fixed": "#700100",
+              "tertiary-fixed-dim": "#f3f0ef",
+              "surface-container-lowest": "#000000",
+              "on-error-container": "#ffd2c8",
+              "surface-container-highest": "#262626",
+              "surface-variant": "#262626",
+              "on-secondary": "#4a0000",
+              "on-secondary-fixed-variant": "#a60100",
+              "on-primary": "#005f26",
+              "inverse-on-surface": "#565555",
+              "secondary": "#ff725e",
+              "on-tertiary": "#605f5f",
+              "surface-dim": "#0e0e0e",
+              "error-dim": "#d53d18",
+              "tertiary-dim": "#edeaea",
+              "surface-bright": "#2c2c2c",
+              "primary-container": "#1cb853",
+              "background": "#0e0e0e",
+              "tertiary-fixed": "#ffffff",
+              "primary-fixed-dim": "#63ef82",
+              "tertiary-container": "#edeaea",
+              "secondary-fixed-dim": "#ffb0a3",
+              "on-background": "#ffffff",
+              "surface-tint": "#72fe8f",
+              "primary": "#72fe8f",
+              "outline-variant": "#484847",
+              "secondary-dim": "#eb0000",
+              "secondary-fixed": "#ffc4ba",
+              "surface-container-high": "#20201f",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed": "#515050",
+              "primary-fixed": "#72fe8f",
+              "inverse-primary": "#006e2d",
+              "on-surface-variant": "#adaaaa",
+              "on-tertiary-container": "#575656",
+              "on-primary-fixed-variant": "#006a2b",
+              "on-primary-container": "#002a0c",
+              "on-error": "#450900",
+              "surface-container": "#1a1a1a",
+              "inverse-surface": "#fcf9f8",
+              "on-secondary-container": "#fff6f4",
+              "tertiary": "#fcf9f8",
+              "error": "#ff7351",
+              "outline": "#767575",
+              "on-surface": "#ffffff",
+              "primary-dim": "#63ef82",
+              "error-container": "#b92902",
+              "on-primary-fixed": "#004a1c"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "fontFamily": {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Base styles for the dashboard using BridgeBeat colors and fonts */
+      body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; color: #ffffff; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .vu-meter-bar { height: 4px; border-radius: 2px; }
+      .glass-panel { background: rgba(44, 44, 44, 0.4); backdrop-filter: blur(20px); }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>  <!-- End of the HTML document -->

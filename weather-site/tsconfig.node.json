@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true,  // Enable project referencing
+    "skipLibCheck": true,  // Skip type checking for external libraries
+    "module": "ESNext",  // Use the modern ES module system
+    "moduleResolution": "Node",  // Use Node.js module resolution strategy
+    "allowSyntheticDefaultImports": true,  // Allow default imports even from non-ESM modules
+    "strict": true  // Enable all strict TypeScript checks
+  },
+  "include": ["vite.config.ts"]  // Only include the Vite configuration file
+}

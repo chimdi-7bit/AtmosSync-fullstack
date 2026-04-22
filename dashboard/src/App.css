@@ -1,0 +1,151 @@
+:root {  /* Global CSS variables for a modern dashboard theme */
+  --primary-color: #646cff;  /* Main brand color for accents */
+  --bg-color: #0a0a0c;  /* Deep dark background color */
+  --card-bg: rgba(255, 255, 255, 0.05);  /* Transparent card background for glassmorphism */
+  --text-primary: #ffffff;  /* High-contrast white for primary text */
+  --text-secondary: #a0a0a0;  /* Muted gray for secondary details */
+  --accent-gradient: linear-gradient(135deg, #646cff 0%, #8c92ff 100%);  /* Gradient for headers */
+}  /* End of :root styling */
+
+body {  /* Main page background styling */
+  margin: 0;  /* Reset default body margins */
+  background-color: var(--bg-color);  /* Apply the deep dark background color */
+  background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);  /* Add a subtle radial glow effect */
+  color: var(--text-primary);  /* Set default text color to white */
+  font-family: 'Inter', sans-serif;  /* Use a modern sans-serif font */
+}  /* End of body styling */
+
+.dashboard {  /* Main dashboard container layout */
+  padding: 40px;  /* Add generous outer padding */
+  max-width: 1400px;  /* Limit dashboard width on large monitors */
+  margin: 0 auto;  /* Center the dashboard horizontally */
+}  /* End of .dashboard styling */
+
+.dashboard-header {  /* Top header section styling */
+  margin-bottom: 50px;  /* Add significant space below the title */
+  text-align: left;  /* Align the title to the left for a modern feel */
+}  /* End of .dashboard-header styling */
+
+.dashboard-header h1 {  /* Large gradient title styling */
+  font-size: 3rem;  /* Make the title very large */
+  margin: 0;  /* Reset title margins */
+  background: var(--accent-gradient);  /* Apply the primary gradient */
+  -webkit-background-clip: text;  /* Clip the background to the text */
+  -webkit-text-fill-color: transparent;  /* Make the text transparent to show the gradient */
+  letter-spacing: -2px;  /* Tighten letter spacing for a sleek look */
+}  /* End of header h1 styling */
+
+.date-time {  /* Digital clock display styling */
+  font-size: 1.2rem;  /* Set a readable size for the time */
+  color: var(--text-secondary);  /* Use muted gray for the clock */
+  margin-top: 10px;  /* Add space above the time */
+  font-weight: 300;  /* Set a light font weight for the clock */
+}  /* End of .date-time styling */
+
+.dashboard-grid {  /* Modern grid layout for dashboard cards */
+  display: grid;  /* Use CSS Grid for the layout */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Responsive columns with a minimum width */
+  gap: 25px;  /* Set consistent spacing between cards */
+}  /* End of .dashboard-grid styling */
+
+.widget {  /* Glassmorphism card styling for widgets */
+  background: var(--card-bg);  /* Set the transparent card background */
+  backdrop-filter: blur(12px);  /* Apply the blur effect to the background behind the card */
+  -webkit-backdrop-filter: blur(12px);  /* Safari support for backdrop blur */
+  border: 1px solid rgba(255, 255, 255, 0.1);  /* Add a subtle border to define the card edges */
+  border-radius: 24px;  /* Round the corners significantly for a soft look */
+  padding: 30px;  /* Add generous internal padding */
+  transition: transform 0.3s ease;  /* Add a smooth transition for hover effects */
+}  /* End of .widget styling */
+
+.widget:hover {  /* Subtle lift effect when hovering over a widget */
+  transform: translateY(-5px);  /* Move the card up slightly on hover */
+}  /* End of .widget:hover styling */
+
+.widget h2 {  /* Card title styling */
+  margin-top: 0;  /* Reset top margin */
+  font-size: 1.2rem;  /* Set a consistent size for card headers */
+  color: var(--text-secondary);  /* Use muted gray for the headers */
+  text-transform: uppercase;  /* Make card headers uppercase */
+  letter-spacing: 1.5px;  /* Add extra spacing between letters */
+  margin-bottom: 25px;  /* Add space below the card title */
+}  /* End of widget h2 styling */
+
+.weather-info .temp {  /* Large weather temperature display */
+  font-size: 4.5rem;  /* Make the temperature the focal point */
+  font-weight: 700;  /* Make the temperature extra bold */
+  margin: 0;  /* Reset margins */
+}  /* End of .temp styling */
+
+.weather-info .desc {  /* Weather condition description styling */
+  font-size: 1.5rem;  /* Set a large size for weather conditions */
+  color: var(--primary-color);  /* Use the brand color for emphasis */
+  margin: 5px 0;  /* Add vertical spacing */
+}  /* End of weather desc styling */
+
+.news-list {  /* Clean news list styling */
+  list-style: none;  /* Remove default bullets */
+  padding: 0;  /* Remove default padding */
+  margin: 0;  /* Remove default margins */
+}  /* End of .news-list styling */
+
+.news-item {  /* Container for each news article story */
+  margin-bottom: 25px;  /* Add space between individual news articles */
+  padding: 15px;  /* Add internal padding to create breathing room */
+  background: rgba(255, 255, 255, 0.03);  /* Use a very subtle background to define the article area */
+  border-radius: 12px;  /* Soften the corners of each news article container */
+  transition: background 0.2s ease;  /* Smooth transition for the hover effect */
+}  /* End of news item styling */
+
+.news-item:hover {  /* Light up the article on hover */
+  background: rgba(255, 255, 255, 0.06);  /* Slightly brighten the background when the user hovers */
+}  /* End of news item hover styling */
+
+.news-meta {  /* Style for news metadata like the source and time */
+  display: flex;  /* Use flexbox for a horizontal layout of meta items */
+  gap: 10px;  /* Add space between different meta elements */
+  font-size: 0.75rem;  /* Set a small size for metadata text */
+  color: var(--primary-color);  /* Use the brand color to highlight meta info */
+  margin-top: 8px;  /* Add space above the metadata */
+  text-transform: uppercase;  /* Make metadata uppercase for a professional look */
+  letter-spacing: 0.5px;  /* Add subtle spacing for readability */
+}  /* End of news meta styling */
+
+.news-item:last-child {  /* Remove divider from the last story */
+  border-bottom: none;  /* Remove the bottom border */
+}  /* End of .news-item:last-child styling */
+
+.news-item a {  /* News headline link styling */
+  color: var(--text-primary);  /* Set link text color to white */
+  text-decoration: none;  /* Remove default underlines */
+  font-size: 1.05rem;  /* Set a comfortable reading size */
+  line-height: 1.4;  /* Set optimal line height for reading headlines */
+  font-weight: 500;  /* Set a medium font weight for headlines */
+  display: block;  /* Make the entire area clickable */
+}  /* End of news item a styling */
+
+.news-item a:hover {  /* Highlight headline on hover */
+  color: var(--primary-color);  /* Change the color to the brand primary on hover */
+}  /* End of news item a:hover styling */
+
+.rates-info {  /* Exchange rate display layout */
+  display: flex;  /* Use flexbox for rates layout */
+  flex-direction: column;  /* Stack rates vertically */
+  gap: 15px;  /* Add space between different currencies */
+}  /* End of .rates-info styling */
+
+.rate-row {  /* Individual currency rate row styling */
+  display: flex;  /* Use flexbox for the row layout */
+  justify-content: space-between;  /* Push label and value to opposite ends */
+  align-items: center;  /* Center label and value vertically */
+}  /* End of .rate-row styling */
+
+.rate-label {  /* Currency pair label styling */
+  color: var(--text-secondary);  /* Use muted gray for the labels */
+  font-size: 1rem;  /* Set a standard size for currency labels */
+}  /* End of .rate-label styling */
+
+.rate-value {  /* Currency value display styling */
+  font-size: 1.2rem;  /* Set a larger size for the exchange values */
+  font-weight: 600;  /* Make the exchange values bold */
+}  /* End of .rate-value styling */

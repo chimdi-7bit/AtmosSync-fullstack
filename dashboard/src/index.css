@@ -1,0 +1,20 @@
+:root {  /* Define global CSS variables in the root selector */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;  /* Set the default font family for the application */
+  line-height: 1.5;  /* Set the line height for better text readability */
+  font-weight: 400;  /* Set the default font weight for regular text */
+  color-scheme: light dark;  /* Support both light and dark operating system themes */
+  color: rgba(255, 255, 255, 0.87);  /* Set a high-contrast text color for dark mode */
+  background-color: #242424;  /* Set a dark background color for the application */
+  font-synthesis: none;  /* Prevent browsers from synthesizing bold or italic font weights */
+  text-rendering: optimizeLegibility;  /* Improve the appearance of text on high-resolution screens */
+  -webkit-font-smoothing: antialiased;  /* Smooth font edges in WebKit-based browsers like Chrome/Safari */
+  -moz-osx-font-smoothing: grayscale;  /* Smooth font edges in Firefox on macOS */
+}  /* End of the :root selector block */
+
+body {  /* Set global body styles */
+  margin: 0;  /* Remove default browser margins from the body */
+  display: flex;  /* Use a flexbox layout for the body content */
+  place-items: center;  /* Center content horizontally and vertically */
+  min-width: 320px;  /* Ensure a minimum width for the application on small screens */
+  min-height: 100vh;  /* Make the body take up at least the full height of the viewport */
+}  /* End of the body selector block */

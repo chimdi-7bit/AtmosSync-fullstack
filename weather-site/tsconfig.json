@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",  // Set the JavaScript target to the latest version
+    "useDefineForClassFields": true,  // Use the modern class fields standard
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],  // Include necessary libraries for web development
+    "allowJs": false,  // Do not allow JavaScript files to be compiled
+    "skipLibCheck": true,  // Skip type checking of declaration files (.d.ts)
+    "esModuleInterop": true,  // Enable compatibility with CommonJS modules
+    "allowSyntheticDefaultImports": true,  // Allow default imports from modules without a default export
+    "strict": true,  // Enable all strict type-checking options for better code quality
+    "forceConsistentCasingInFileNames": true,  // Ensure consistent casing in imports
+    "module": "ESNext",  // Use ES modules for the output
+    "moduleResolution": "Node",  // Use Node.js-style module resolution
+    "resolveJsonModule": true,  // Allow importing JSON files
+    "isolatedModules": true,  // Ensure each file can be safely transpiled independently
+    "noEmit": true,  // Do not emit any output files (used for type checking only)
+    "jsx": "react-jsx"  // Support React JSX with the modern transform
+  },
+  "include": ["src"],  // Include all files in the src directory for compilation
+  "references": [{ "path": "./tsconfig.node.json" }]  // Reference the node configuration if it exists
+}
